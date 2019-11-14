@@ -1,0 +1,17 @@
+server {
+  root /usr/share/nginx/html;
+
+  listen 443 ssl http2;
+  listen [::]:443 ssl http2;
+
+  server_name example.com;
+
+  ssl_certificate /etc/ssl/certs/ca.crt;
+  ssl_certificate_key /etc/ssl/private/ca.key;
+
+  ssl_protocols TLSv1.3;
+
+  location / {
+
+  }
+}
